@@ -36,7 +36,7 @@ def analyze_market_data():
     inside_bar_breakout_up = is_inside_bar and (m15_close > m15_high1)
     inside_bar_breakout_down = is_inside_bar and (m15_close < m15_low1)
     
-    action = "HOLD"
+    action = "buy"
     strategy = "Scanning for institutional footprint structures..."
     
     if inside_bar_breakout_up and is_macro_bullish:
