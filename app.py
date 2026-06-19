@@ -8,7 +8,7 @@ import time
 TOKEN = "8845422871:AAG5eLOW2ycgxmCMUaMqaDiY0ygZixQ4k1k"
 CHAT_ID = "@MySyntXSignals"
 
-st.set_page_config(page_title="SyntX Master Matrix", page_icon="📊", layout="vertical")
+st.set_page_config(page_title="SyntX Master Matrix", page_icon="📊", layout="wide")
 st.title("🚨 SyntX Adaptive Master Matrix")
 st.write("Real-time Top-Down Institutional Signal Dashboard")
 
