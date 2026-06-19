@@ -2,22 +2,12 @@ import streamlit as st
 import numpy as np
 import requests
 import time
-import os
 
 # --- SETUP BASE SYSTEM CONFIG ---
 st.set_page_config(page_title="SyntX Master Terminal", page_icon="📊", layout="wide")
 
-# --- SECURE CREDENTIAL LOADING ---
-# Store these in .streamlit/secrets.toml or as environment variables
-# secrets.toml format:
-#   TELEGRAM_TOKEN = "your_bot_token"
-#   TELEGRAM_CHAT_ID = "@YourChannel"
-try:
-    TOKEN = st.secrets["TELEGRAM_TOKEN"]
-    CHAT_ID = st.secrets["TELEGRAM_CHAT_ID"]
-except Exception:
-    TOKEN = os.getenv("TELEGRAM_TOKEN", "")
-    CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "@MySyntXSignals")
+TOKEN = "8845422871:AAG5eLOW2ycgxmCMUaMqaDiY0ygZixQ4k1k"
+CHAT_ID = "@MySyntXSignals"
 
 # --- PREMIUM FINTECH MATRIX STYLING SHEET ---
 st.markdown("""
@@ -234,15 +224,6 @@ st.markdown("""
         </p>
     </div>
     """, unsafe_allow_html=True)
-
-# --- CREDENTIAL STATUS ---
-if not TOKEN:
-    st.warning(
-        "⚠️ No Telegram token found. "
-        "Add `TELEGRAM_TOKEN` to `.streamlit/secrets.toml` or as an environment variable "
-        "to enable signal transmission.",
-        icon="🔑"
-    )
 
 # --- FILTER CONTROLS SIDEBAR ---
 st.sidebar.markdown("<h3 style='color:#38bdf8;'>🔍 ASSET FILTER CLUSTERS</h3>", unsafe_allow_html=True)
